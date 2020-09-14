@@ -1,0 +1,13 @@
+<div class="alert-wrap" *ngIf="text">
+  <div class="alert" [ngClass]="{
+     'alert-success': type === 'success',
+     'alert-warning': type === 'warning',
+     'alert-danger': type === 'danger'
+}">
+    <mat-card>
+      <h3 mat-dialog-title>Alert message</h3>
+      <div mat-dialog-content><h2>{{ text }}</h2></div>
+    </mat-card>
+  </div>
+</div>
+

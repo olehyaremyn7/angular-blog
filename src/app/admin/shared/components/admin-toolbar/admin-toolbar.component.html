@@ -1,0 +1,24 @@
+<div class="toolbar-admin">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span routerLink="/">Angular Blog Admin</span>
+      <ul class="toolbar-links" *ngIf="authService.isAuthenticated()">
+        <li routerLinkActive="active" class="li-r">
+          <button mat-raised-button color="primary" [routerLink]="['/admin', 'dashboard']">
+            Dashboard
+          </button>
+        </li>
+        <li routerLinkActive="active" class="li-r">
+          <button mat-raised-button color="primary" [routerLink]="['/admin', 'create']">
+            Create
+          </button>
+        </li>
+        <li>
+          <button mat-raised-button color="primary" (click)="logout($event)">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

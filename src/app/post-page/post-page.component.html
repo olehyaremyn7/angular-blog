@@ -1,0 +1,30 @@
+<div class="single-post-card" *ngIf="post$ | async as post; else loading">
+  <mat-card class="post-card">
+    <div class="card-header">
+      <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title><small class="author">{{ post.author }}</small></mat-card-title>
+          <mat-card-title><h2 class="post-title">{{ post.title }}</h2></mat-card-title>
+          <mat-card-subtitle><small>{{ post.date | date: 'medium' }}</small></mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <mat-card-content>
+      <div class="info">
+        <quill-view-html [content]="post.text">
+
+        </quill-view-html>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button routerLink="/" class="btn-post-home" mat-raised-button color="primary">HOME</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
+
+<div class="footer">
+  <app-footer></app-footer>
+</div>

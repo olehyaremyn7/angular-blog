@@ -1,0 +1,63 @@
+<div class="create-form-card">
+  <mat-card class="create-card">
+    <div class="create-form-card-header">
+      <mat-card-header>
+        <h2 class="header-h2">Create post</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="card-content-form">
+          <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+
+            <div
+              class="form-control"
+              [ngClass]="{invalid: form.get('title').touched && form.get('title').invalid}">
+              <mat-form-field class="mat-form-field-title">
+                <mat-label for="title">Post name</mat-label>
+                <input matInput id="title" formControlName="title" placeholder="Enter post title...">
+                <mat-error
+                  *ngIf="form.get('title').touched && form.get('title').invalid"
+                  class="validation"
+                >
+                  <small *ngIf="form.get('title').errors.required">
+                    Please enter post title
+                  </small>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div
+              class="form-control"
+              [ngClass]="{invalid: form.get('author').touched && form.get('author').invalid}">
+              <mat-form-field class="mat-form-field-author">
+                <mat-label for="password">Post author</mat-label>
+                <input matInput style="border: none" type="text" id="author" formControlName="author">
+                <mat-error
+                  *ngIf="form.get('author').touched && form.get('author').invalid"
+                  class="validation"
+                >
+                  <small *ngIf="form.get('author').errors.required">
+                    Please enter your name
+                  </small>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-control">
+                <div class="form-text-field">
+                  <quill-editor formControlName="text">
+
+                  </quill-editor>
+                </div>
+            </div>
+
+            <button mat-raised-button color="primary"
+                    type="submit"
+                    class="create-btn"
+                    [disabled]="form.invalid"
+            >Create</button>
+          </form>
+        </div>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

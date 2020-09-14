@@ -1,0 +1,17 @@
+.alert-wrap {
+  position: fixed;
+  top: 50px;
+  right: 40px;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.alert-wrap mat-card {
+  padding: 20px 20px 20px 20px;
+}
+
+.alert-wrap mat-card h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration-line: underline;
+}

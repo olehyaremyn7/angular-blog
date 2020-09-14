@@ -1,0 +1,39 @@
+.dashboard-table {
+  margin-top: 25px;
+}
+
+.dashboard-table mat-form-field {
+  width: 50%;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  background-color: #303030;
+}
+
+table,
+th,
+td {
+  font-size: 15px;
+}
+
+.table-open {
+  margin-right: 15px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+mat-paginator {
+  background-color: #303030;
+  font-size: 14px;
+}
+
+mat-spinner {
+  margin: 350px auto;
+  width: 50%;
+  height: 50%;
+}

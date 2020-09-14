@@ -1,0 +1,38 @@
+.single-post-card {
+
+  margin-top: 50px;
+
+  .post-card {
+    border: 2px solid #C2185B;
+    padding: 50px 50px 50px 50px;
+  }
+
+  .author {
+    font-size: 20px;
+  }
+
+  .post-title {
+    font-size: 25px;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .info p {
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .btn-post-home {
+    margin-left: 8px;
+
+  }
+}
+
+mat-spinner {
+  margin: 350px auto;
+  width: 50%;
+  height: 50%;
+}

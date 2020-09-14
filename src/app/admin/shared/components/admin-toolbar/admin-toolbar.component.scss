@@ -1,0 +1,31 @@
+.toolbar-admin mat-toolbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+
+  ul {
+    display: flex;
+    margin-left: 72%;
+    padding-left: 10px;
+  }
+
+  .li-r {
+    margin-right: 10px;
+  }
+
+  li.active button {
+    color: var(--dark-color);
+    cursor: default;
+  }
+
+  button {
+    color: #fff;
+    margin: 0 0.50rem;
+
+    &:hover {
+      color: var(--light-color);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="card">
+  <mat-card class="post-card">
+    <div class="card-header">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title><h2>{{ post.title }}</h2></mat-card-title>
+        <mat-card-subtitle><small>{{ post.date | date: 'dd.MM.yyyy' }}</small></mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <mat-card-content>
+      <h2>This post was written by the author <i>{{ post.author }}</i></h2>
+      <p>
+        To view the text of the post, open the post page by clicking "Open"
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [routerLink]="['/post', post.id]" mat-button>OPEN</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
